@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rick_and_morty/core/common/extensions/context_extensions.dart';
 import 'package:rick_and_morty/core/router/router.dart';
 
 class CharactersPage extends StatelessWidget {
@@ -12,7 +13,7 @@ class CharactersPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Characters Page'),
+            Text(context.l10n.characters_page_title),
             const SizedBox(
               height: 16,
             ),

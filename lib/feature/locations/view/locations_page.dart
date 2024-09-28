@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty/core/common/extensions/context_extensions.dart';
 
 class LocationsPage extends StatelessWidget {
   const LocationsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Locations Page'),
+        child: Text(context.l10n.locations_page_title),
       ),
     );
   }
