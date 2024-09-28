@@ -5,6 +5,8 @@ import 'package:rick_and_morty/core/di/base_module.dart';
 import 'package:rick_and_morty/core/domain/usecase/use_case_module.dart';
 import 'package:rick_and_morty/feature/character_detail/bloc/character_detail_bloc.dart';
 import 'package:rick_and_morty/feature/characters/bloc/characters_bloc.dart';
+import 'package:rick_and_morty/feature/episodes/bloc/episodes_bloc.dart';
+import 'package:rick_and_morty/feature/locations/bloc/locations_bloc.dart';
 
 final class ServiceLocator {
   const ServiceLocator._privateConstructor();
@@ -31,6 +33,12 @@ final class ServiceLocator {
       )
       ..registerFactory(
         () => CharacterDetailBloc(getIt()),
+      )
+      ..registerFactory(
+        () => LocationsBloc(getIt()),
+      )
+      ..registerFactory(
+        () => EpisodesBloc(getIt()),
       );
   }
 }

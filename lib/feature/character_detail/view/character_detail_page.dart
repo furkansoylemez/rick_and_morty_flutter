@@ -42,7 +42,7 @@ final class _CharacterDetailPage extends StatelessWidget {
 }
 
 final class _CharacterDetailView extends StatelessWidget {
-  const _CharacterDetailView({required this.character, super.key});
+  const _CharacterDetailView({required this.character});
   final Character character;
 
   @override
@@ -87,7 +87,7 @@ final class _CharacterDetailView extends StatelessWidget {
 }
 
 final class _SectionTitle extends StatelessWidget {
-  const _SectionTitle({required this.title, super.key});
+  const _SectionTitle({required this.title});
   final String title;
 
   @override
@@ -110,7 +110,6 @@ final class _InfoTile extends StatelessWidget {
   const _InfoTile({
     required this.icon,
     required this.title,
-    super.key,
     this.subtitle,
   });
   final IconData icon;
@@ -137,7 +136,7 @@ final class _InfoTile extends StatelessWidget {
 }
 
 final class _EpisodeList extends StatelessWidget {
-  const _EpisodeList({required this.episodes, super.key});
+  const _EpisodeList({required this.episodes});
   final List<String> episodes;
 
   @override

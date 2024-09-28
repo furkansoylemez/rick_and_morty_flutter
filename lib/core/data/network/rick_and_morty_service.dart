@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:rick_and_morty/core/data/model/character_page_remote.dart';
 import 'package:rick_and_morty/core/data/model/character_remote.dart';
+import 'package:rick_and_morty/core/data/model/episode_page_remote.dart';
+import 'package:rick_and_morty/core/data/model/location_page_remote.dart';
 
 part 'rick_and_morty_service.g.dart';
 
@@ -17,5 +19,15 @@ abstract class RickAndMortyService {
   @GET('/character/{id}')
   Future<CharacterRemote> getCharacter(
     @Path() String id,
+  );
+
+  @GET('/location')
+  Future<LocationPageRemote> getLocations(
+    @Query('page') int page,
+  );
+
+  @GET('/episode')
+  Future<EpisodePageRemote> getEpisodes(
+    @Query('page') int page,
   );
 }
