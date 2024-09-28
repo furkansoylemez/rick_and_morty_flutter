@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rick_and_morty/core/common/extensions/context_extensions.dart';
 
-class LocationsPage extends StatelessWidget {
+final class LocationsPage extends StatelessWidget {
   const LocationsPage({super.key});
 
   @override

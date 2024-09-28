@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:rick_and_morty/core/di/base_module.dart';
 import 'package:rick_and_morty/core/domain/entity/character.dart';
+import 'package:rick_and_morty/core/router/router.dart';
 import 'package:rick_and_morty/feature/characters/bloc/characters_bloc.dart';
 
-class CharactersPage extends StatelessWidget {
+final class CharactersPage extends StatelessWidget {
   const CharactersPage({super.key});
 
   @override
@@ -17,14 +19,14 @@ class CharactersPage extends StatelessWidget {
   }
 }
 
-class _CharactersPage extends StatefulWidget {
+final class _CharactersPage extends StatefulWidget {
   const _CharactersPage();
 
   @override
   State<_CharactersPage> createState() => _CharactersPageState();
 }
 
-class _CharactersPageState extends State<_CharactersPage> {
+final class _CharactersPageState extends State<_CharactersPage> {
   final PagingController<int, Character> _pagingController = PagingController(firstPageKey: 1);
 
   @override
@@ -58,6 +60,9 @@ class _CharactersPageState extends State<_CharactersPage> {
           builderDelegate: PagedChildBuilderDelegate<Character>(
             itemBuilder: (context, item, index) => ListTile(
               title: Text(item.name),
+              onTap: () {
+                context.go(characterDetailPath(item.id.toString()));
+              },
             ),
           ),
         ),

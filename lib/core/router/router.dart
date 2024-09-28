@@ -12,7 +12,8 @@ final _charactersTabNavigatorKey = GlobalKey<NavigatorState>();
 const charactersPath = '/characters';
 const locationsPath = '/locations';
 const episodesPath = '/episodes';
-const characterDetailPath = '/character-detail';
+const _characterDetailPath = '/character/:id';
+String characterDetailPath(String id) => '/character/$id';
 
 final router = GoRouter(
   initialLocation: charactersPath,
@@ -46,10 +47,12 @@ final router = GoRouter(
               },
             ),
             GoRoute(
-              path: characterDetailPath,
+              path: _characterDetailPath,
               pageBuilder: (context, GoRouterState state) {
                 return _getPage(
-                  child: const CharacterDetailPage(),
+                  child: CharacterDetailPage(
+                    id: state.pathParameters['id'].toString(),
+                  ),
                   state: state,
                 );
               },

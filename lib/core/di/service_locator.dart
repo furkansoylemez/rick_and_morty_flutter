@@ -3,6 +3,7 @@ import 'package:rick_and_morty/core/data/network/network_module.dart';
 import 'package:rick_and_morty/core/data/repository/repository_module.dart';
 import 'package:rick_and_morty/core/di/base_module.dart';
 import 'package:rick_and_morty/core/domain/usecase/use_case_module.dart';
+import 'package:rick_and_morty/feature/character_detail/bloc/character_detail_bloc.dart';
 import 'package:rick_and_morty/feature/characters/bloc/characters_bloc.dart';
 
 final class ServiceLocator {
@@ -24,8 +25,12 @@ final class ServiceLocator {
   }
 
   void _setUpBlocs() {
-    getIt.registerFactory(
-      () => CharactersBloc(getIt()),
-    );
+    getIt
+      ..registerFactory(
+        () => CharactersBloc(getIt()),
+      )
+      ..registerFactory(
+        () => CharacterDetailBloc(getIt()),
+      );
   }
 }

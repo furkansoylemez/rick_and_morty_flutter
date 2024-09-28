@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rick_and_morty/core/common/extensions/context_extensions.dart';
 
-class EpisodesPage extends StatelessWidget {
+final class EpisodesPage extends StatelessWidget {
   const EpisodesPage({super.key});
 
   @override

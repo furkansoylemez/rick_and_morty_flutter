@@ -8,7 +8,7 @@ import 'package:rick_and_morty/core/domain/usecase/get_characters_use_case.dart'
 part 'characters_event.dart';
 part 'characters_state.dart';
 
-class CharactersBloc extends Bloc<CharactersEvent, CharactersState> {
+final class CharactersBloc extends Bloc<CharactersEvent, CharactersState> {
   CharactersBloc(this._getCharactersUseCase) : super(const CharactersState([], null, null)) {
     on<FetchCharactersEvent>(_onFetchCharacters);
   }

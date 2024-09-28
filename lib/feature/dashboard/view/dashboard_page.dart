@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rick_and_morty/core/common/extensions/context_extensions.dart';
 
-class DashboardPage extends StatelessWidget {
+final class DashboardPage extends StatelessWidget {
   const DashboardPage({required this.child, super.key});
 
   final StatefulNavigationShell child;
