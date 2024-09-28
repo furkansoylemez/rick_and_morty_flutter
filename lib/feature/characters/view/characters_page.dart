@@ -6,6 +6,7 @@ import 'package:rick_and_morty/core/di/base_module.dart';
 import 'package:rick_and_morty/core/domain/entity/character.dart';
 import 'package:rick_and_morty/core/router/router.dart';
 import 'package:rick_and_morty/feature/characters/bloc/characters_bloc.dart';
+import 'package:rick_and_morty/feature/characters/widget/character_list_item.dart';
 
 final class CharactersPage extends StatelessWidget {
   const CharactersPage({super.key});
@@ -58,11 +59,9 @@ final class _CharactersPageState extends State<_CharactersPage> {
         child: PagedListView<int, Character>(
           pagingController: _pagingController,
           builderDelegate: PagedChildBuilderDelegate<Character>(
-            itemBuilder: (context, item, index) => ListTile(
-              title: Text(item.name),
-              onTap: () {
-                context.go(characterDetailPath(item.id.toString()));
-              },
+            itemBuilder: (context, item, index) => CharacterListItem(
+              character: item,
+              onTap: () => context.go(characterDetailPath(item.id.toString())),
             ),
           ),
         ),

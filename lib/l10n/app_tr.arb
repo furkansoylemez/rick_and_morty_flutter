@@ -1,5 +1,12 @@
 {
   "characters_page_title": "Karakterler",
   "locations_page_title": "Lokasyonlar",
-  "episodes_page_title": "Bölümler"
+  "episodes_page_title": "Bölümler",
+  "character_detail_page_basic_info_title": "Temel Bilgiler",
+  "character_detail_page_gender_title": "Cinsiyet",
+  "character_detail_page_origin_title": "Memleket",
+  "character_detail_page_last_location_title": "Bilinen Son Konum",
+  "character_detail_page_type_title": "Tip",
+  "character_detail_page_episodes_title": "Göründüğü Bölümler",
+  "character_detail_page_created_title": "Yaratılma Zamanı"
 }

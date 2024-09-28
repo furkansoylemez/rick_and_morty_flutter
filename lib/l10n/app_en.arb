@@ -1,5 +1,12 @@
 {
   "characters_page_title": "Characters",
   "locations_page_title": "Locations",
-  "episodes_page_title": "Episodes"
+  "episodes_page_title": "Episodes",
+  "character_detail_page_basic_info_title": "Basic Info",
+  "character_detail_page_gender_title": "Gender",
+  "character_detail_page_origin_title": "Origin",
+  "character_detail_page_last_location_title": "Last Known Location",
+  "character_detail_page_type_title": "Type",
+  "character_detail_page_episodes_title": "Episodes Appeared In",
+  "character_detail_page_created_title": "Created"
 }
