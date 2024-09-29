@@ -1,7 +1,7 @@
 <h1 align="center">Rick and Morty</h1>
 
 <p align="center">  
-🗡️ Rick and Mortydemonstrates modern Flutter development with go_router, get_it, retrofit, dio, bloc, and Material Design based on BLoC state management.
+🗡️ Rick and Morty demonstrates modern Flutter development with go_router, get_it, retrofit, dio, bloc, and Material Design based on BLoC state management.
 </p>
 
 ## Tech stack
